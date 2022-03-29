@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiCatalogoJogosAzure</name>
+    </assembly>
+    <members>
+        <member name="M:ApiCatalogoJogos.Controllers.V1.JogosController.Obter(System.Int32,System.Int32)">
+            <summary>
+            Buscar todos os jogos de forma paginada
+            </summary>
+            <remarks>
+            Não é possível retornar os jogos sem paginação
+            </remarks>
+            <param name="pagina">Indica qual página está consultando, min. 1</param>
+            <param name="quantidade">Indica quantidade de registros por pagina, min. 1 e max. 50</param>
+            <response code="200">Retorna a lista de jogos</response>
+            <response code="204">Não há jogos</response>
+        </member>
+        <member name="M:ApiCatalogoJogos.Controllers.V1.JogosController.Obter(System.Guid)">
+            <summary>
+            Retornar jogo por ID
+            </summary>
+            <param name="idJogo">ID do jogo</param>
+            <response code="200">Retorna jogo filtrado</response>
+            <response code="204">Não há jogo com este ID</response>
+        </member>
+    </members>
+</doc>
